@@ -1,7 +1,11 @@
 return {
-	"shaunsingh/moonlight.nvim",
+	"navarasu/onedark.nvim",
 	priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme moonlight]])
+		require("onedark").setup {
+			style = "deep"
+		}
+		require("onedark").load()
+		-- vim.cmd([[colorscheme onedark]])
 	end,
 }
